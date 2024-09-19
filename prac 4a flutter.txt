@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Sample'),
+          backgroundColor: Colors.greenAccent[400],
+          centerTitle: true,
+        ),
+        body: Center(
+          child: Card(
+            elevation: 50,
+            shadowColor: Colors.black,
+            color: Colors.greenAccent[100],
+            child: SizedBox(
+              width: 300,
+              height: 500,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.green[500],
+                      radius: 108,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 100,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'Sample',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.green[900],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      'It contains well written, well thought and well explained computer science and programming articles, quizzes, projects, interview experiences and much more!!',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.green,
+                      ),
+                    ),
+                    const SizedBox(height: 5),
+                    SizedBox(
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: () {}, // replaced 'Null' with an empty function
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(Colors.green),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(4),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.touch_app),
+                              Text('Visit'),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
